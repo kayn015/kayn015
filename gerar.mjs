@@ -1,6 +1,7 @@
 // Gera o README.md do perfil e as imagens em assets/ a partir de perfil.json.
 // Uso: node gerar.mjs   (edite só o perfil.json; nunca os arquivos gerados)
 import { readFileSync, writeFileSync, mkdirSync, rmSync, existsSync } from "node:fs";
+import { createHash } from "node:crypto";
 
 const aqui = (arq) => new URL(arq, import.meta.url);
 const p = JSON.parse(readFileSync(aqui("./perfil.json"), "utf8"));
@@ -170,7 +171,9 @@ p.projetos.forEach((proj, i) => gravar(`projeto-${i + 1}.svg`, cartao(proj, i)))
 const contatos = p.contatos.filter((c) => c.link);
 contatos.forEach((c, i) => gravar(`contato-${i + 1}.svg`, botao(c.rotulo)));
 
-const img = (arq, alt, largura = "100%") => `<img src="assets/${arq}" width="${largura}" alt="${esc(alt)}">`;
+// O "?v=" muda quando a imagem muda, para o GitHub e o navegador não mostrarem a versão antiga guardada.
+const versao = (arq) => createHash("sha1").update(readFileSync(aqui("./assets/" + arq))).digest("hex").slice(0, 8);
+const img = (arq, alt, largura = "100%") => `<img src="assets/${arq}?v=${versao(arq)}" width="${largura}" alt="${esc(alt)}">`;
 const corpo = [
   `<p align="center">${img("banner.svg", `${p.nome} · ${p.titulo}`)}</p>`,
   `<p>${img("secao-1.svg", S.sobre)}</p>`,
@@ -184,12 +187,12 @@ const corpo = [
   }).join("\n")}\n</p>`,
   ...(contatos.length ? [
     `<p>${img("secao-4.svg", S.contatos)}</p>`,
-    `<p align="center">\n${contatos.map((c, i) => `<a href="${esc(c.link)}"><img src="assets/contato-${i + 1}.svg" height="46" alt="${esc(c.rotulo)}"></a>`).join("\n")}\n</p>`,
+    `<p align="center">\n${contatos.map((c, i) => `<a href="${esc(c.link)}"><img src="assets/contato-${i + 1}.svg?v=${versao(`contato-${i + 1}.svg`)}" height="46" alt="${esc(c.rotulo)}"></a>`).join("\n")}\n</p>`,
   ] : []),
 ].join("\n\n");
 
 writeFileSync(aqui("./README.md"), `<!-- Arquivo gerado por gerar.mjs a partir de perfil.json. Não edite aqui. -->\n\n${corpo}\n`);
 writeFileSync(aqui("./previa.html"), `<!doctype html><meta charset="utf-8"><title>Prévia do perfil</title>
 <body style="margin:0;background:#0d1117;color:#e6edf3;font:16px/1.5 'Segoe UI',Helvetica,Arial,sans-serif">
-<div style="max-width:880px;margin:24px auto;padding:24px;border:1px solid #30363d;border-radius:8px">\n${corpo.replace(/src="assets\/([^"]+)"/g, (_, arq) => `src="data:image/svg+xml;base64,${readFileSync(aqui("./assets/" + arq)).toString("base64")}"`)}\n</div></body>\n`);
+<div style="max-width:880px;margin:24px auto;padding:24px;border:1px solid #30363d;border-radius:8px">\n${corpo.replace(/src="assets\/([^"?]+)[^"]*"/g, (_, arq) => `src="data:image/svg+xml;base64,${readFileSync(aqui("./assets/" + arq)).toString("base64")}"`)}\n</div></body>\n`);
 console.log(`Gerado: README.md, previa.html e ${p.projetos.length + contatos.length + 6} imagens em assets/.`);
