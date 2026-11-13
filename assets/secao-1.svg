@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 84" width="1200" height="84" role="img" aria-label="FICHA">
+<rect x=".75" y=".75" width="1198.5" height="82.5" rx="14" fill="#191622" stroke="#322d40" stroke-width="1.5"/>
+<rect x="32" y="70" width="54" height="4" rx="2" fill="#ff6b8b"/>
+<text x="32" y="57" font-family="Impact, Haettenschweiler, 'Arial Narrow Bold', 'Franklin Gothic Bold', sans-serif" font-size="46" fill="#ff6b8b">01</text>
+<text x="112" y="57" font-family="Impact, Haettenschweiler, 'Arial Narrow Bold', 'Franklin Gothic Bold', sans-serif" font-size="42" letter-spacing="3" fill="#ece8f2">FICHA</text>
+<path transform="translate(1010 28) scale(1.15)" d="M12 0l3.5 8 8.5 .8-6.5 5.7 2 8.5L12 18.4 4.5 23l2-8.5L0 8.8 8.5 8z" fill="#ff6b8b" opacity="0.9"/><path transform="translate(1042 28) scale(1.15)" d="M12 0l3.5 8 8.5 .8-6.5 5.7 2 8.5L12 18.4 4.5 23l2-8.5L0 8.8 8.5 8z" fill="#a09ab0" opacity="0.25"/><path transform="translate(1074 28) scale(1.15)" d="M12 0l3.5 8 8.5 .8-6.5 5.7 2 8.5L12 18.4 4.5 23l2-8.5L0 8.8 8.5 8z" fill="#a09ab0" opacity="0.25"/><path transform="translate(1106 28) scale(1.15)" d="M12 0l3.5 8 8.5 .8-6.5 5.7 2 8.5L12 18.4 4.5 23l2-8.5L0 8.8 8.5 8z" fill="#a09ab0" opacity="0.25"/><path transform="translate(1138 28) scale(1.15)" d="M12 0l3.5 8 8.5 .8-6.5 5.7 2 8.5L12 18.4 4.5 23l2-8.5L0 8.8 8.5 8z" fill="#a09ab0" opacity="0.25"/>
+</svg>
