@@ -16,7 +16,7 @@
 
 <p>
 <img src="assets/projeto-1.svg" width="49%" alt="Controle de TI: Inventário de computadores e impressoras, leitura de contadores por SNMP, termos de responsabilidade e painel de indicadores.">
-<img src="assets/projeto-2.svg" width="49%" alt="Sistema Comercial: Catálogo de atas de registro de preços com vitrine para clientes, solicitações de adesão e painel de gestão.">
+<a href="https://sistema-atas-beryl.vercel.app"><img src="assets/projeto-2.svg" width="49%" alt="Sistema Comercial: Catálogo de atas de registro de preços com vitrine para clientes, solicitações de adesão e painel de gestão."></a>
 <img src="assets/projeto-3.svg" width="49%" alt="Separação de Materiais: Separação, conferência cega e recebimento de ordens de produção pelo celular, com leitura de código e tratamento de divergências.">
 <img src="assets/projeto-4.svg" width="49%" alt="Centro de Custo: Lançamentos por centro de custo com importação de planilhas, painel e relatórios em PDF e Excel.">
 </p>

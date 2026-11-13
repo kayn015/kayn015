@@ -3,50 +3,84 @@
   "titulo": "Desenvolvedor Full Stack",
   "frase": "Sistemas internos que tiram o trabalho do papel e da planilha.",
   "selo": "PORTFÓLIO // 2026",
-
   "sobre": [
     "Sou desenvolvedor full stack e gosto de transformar rotinas manuais em sistemas simples de usar.",
     "Desenvolvo sistemas web para operação e gestão: controle de ativos de TI, catálogo comercial, separação de materiais e centros de custo. Os projetos abaixo rodam em modo demonstração, com dados fictícios."
   ],
-
-  "tecnologias": ["Python", "Flask", "TypeScript", "Next.js", "React", "PostgreSQL", "SQLite", "Prisma", "C#", ".NET", "Tailwind CSS", "Git"],
-
+  "tecnologias": [
+    "Python",
+    "Flask",
+    "TypeScript",
+    "Next.js",
+    "React",
+    "PostgreSQL",
+    "SQLite",
+    "Prisma",
+    "C#",
+    ".NET",
+    "Tailwind CSS",
+    "Git"
+  ],
   "projetos": [
     {
       "nome": "Controle de TI",
       "descricao": "Inventário de computadores e impressoras, leitura de contadores por SNMP, termos de responsabilidade e painel de indicadores.",
-      "tags": ["Python", "Flask", "SQLite"],
+      "tags": [
+        "Python",
+        "Flask",
+        "SQLite"
+      ],
       "link": ""
     },
     {
       "nome": "Sistema Comercial",
       "descricao": "Catálogo de atas de registro de preços com vitrine para clientes, solicitações de adesão e painel de gestão.",
-      "tags": ["Next.js", "Prisma", "PostgreSQL"],
-      "link": ""
+      "tags": [
+        "Next.js",
+        "Prisma",
+        "PostgreSQL"
+      ],
+      "link": "https://sistema-atas-beryl.vercel.app"
     },
     {
       "nome": "Separação de Materiais",
       "descricao": "Separação, conferência cega e recebimento de ordens de produção pelo celular, com leitura de código e tratamento de divergências.",
-      "tags": ["Next.js", "Prisma", "PostgreSQL"],
+      "tags": [
+        "Next.js",
+        "Prisma",
+        "PostgreSQL"
+      ],
       "link": ""
     },
     {
       "nome": "Centro de Custo",
       "descricao": "Lançamentos por centro de custo com importação de planilhas, painel e relatórios em PDF e Excel.",
-      "tags": ["Python", "Flask", "SQLite"],
+      "tags": [
+        "Python",
+        "Flask",
+        "SQLite"
+      ],
       "link": ""
     }
   ],
-
   "contatos": [
-    { "rotulo": "LinkedIn", "link": "" },
-    { "rotulo": "E-mail", "link": "" }
+    {
+      "rotulo": "LinkedIn",
+      "link": ""
+    },
+    {
+      "rotulo": "E-mail",
+      "link": ""
+    }
   ],
-
-  "secoes": { "sobre": "FICHA", "tecnologias": "ARSENAL", "projetos": "MISSÕES", "contatos": "CONTATO" },
+  "secoes": {
+    "sobre": "FICHA",
+    "tecnologias": "ARSENAL",
+    "projetos": "MISSÕES",
+    "contatos": "CONTATO"
+  },
   "textoBotaoProjeto": "ABRIR DEMONSTRAÇÃO",
   "textoSemLink": "EM BREVE",
-
   "cores": {
     "destaque": "#ff6b8b",
     "fundo": "#121019",
@@ -56,6 +90,11 @@
     "suave": "#a09ab0",
     "sol": "#ffb98a",
     "silhueta": "#0b0911",
-    "ceu": ["#121019", "#241a36", "#4f2a4e", "#8f4459"]
+    "ceu": [
+      "#121019",
+      "#241a36",
+      "#4f2a4e",
+      "#8f4459"
+    ]
   }
 }
